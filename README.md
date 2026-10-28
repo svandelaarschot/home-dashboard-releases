@@ -26,6 +26,14 @@ Dit installeert ook de tray-app (melding en beeld als er wordt aangebeld). Verwi
 & ([scriptblock]::Create((irm https://github.com/svandelaarschot/home-dashboard-releases/releases/latest/download/install-windows.ps1))) -Uninstall
 ```
 
+**Tweede installatie ernaast** (bijv. om te testen naast een bestaande): zelfde regel met een andere poort:
+
+```powershell
+& ([scriptblock]::Create((irm https://github.com/svandelaarschot/home-dashboard-releases/releases/latest/download/install-windows.ps1))) -Port 8081
+```
+
+Die krijgt een eigen map, eigen poorten, snelkoppelingen en tray-app. Verwijderen: `-Port 8081 -Uninstall`.
+
 ## Daarna
 
 De **installatiewizard** opent in de browser: IKEA-hub zoeken en koppelen, deurbel, meldingen op je
